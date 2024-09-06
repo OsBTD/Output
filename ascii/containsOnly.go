@@ -1,13 +1,11 @@
 package ascii
 
-import "strings"
-
-func ContainsOnly(string) bool {
-	_, input, _, _ = FileNameManagement()
-	for i := 0; i < len(input); i++ {
-		if !strings.ContainsAny(string(input[i]), "\\n") {
+func Checknewline(inputsplit []string) bool {
+	for _, line := range inputsplit {
+		if len(line) != 0 {
 			return false
 		}
 	}
+
 	return true
 }
