@@ -30,7 +30,7 @@ func FileNameManagement() (string, string, string, []string) {
 		filename = args[1]
 		Banner = args[2]
 
-	} else if len(args) == 2 && strings.HasPrefix(args[0], "--output=<") {
+	} else if len(args) == 2 && strings.HasPrefix(args[0], "--output=") {
 		args = append(args, Banner)
 		filename = args[0]
 		input = args[1]
